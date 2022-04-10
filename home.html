@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+    <title>Space</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            background-color: black;
+            overflow-x: hidden;
+        }
+        .nav {
+  height: 100px;
+  width: 100%;
+  background-color: #0e0101;
+  position: fixed;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 24px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgb(182, 16, 247);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color:black;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(16, 241, 27);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+            #home{
+            display:flex;
+            flex-direction:column;
+            padding:30px 200px;
+            justify-content: center;
+            align-items: center;
+            height:580px;
+        }
+#container{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: center;
+            }
+#container div{
+                background-color:cyan;
+                font-size:20px;
+                margin:20px;
+                padding:20px;
+                width:200px;
+                text-align: center;
+                font-size:1.7rem;
+            }
+#container img{
+    border:2px solid black;
+    height:80px;
+    display:block;
+    margin:0 auto;
+}
+#container div a{
+    color:blue;
+}
+#container div a:hover{
+    color:black;
+}
+#home::before{
+    content:"";
+    position:absolute;
+    height:600px;
+    width:900px;
+    background:url(space.gif) no-repeat center center/cover;
+    z-index:-1;
+}
+#home h1{
+    font-size:4.5rem;
+    font-family: 'Inspiration', cursive;
+    color:white;
+}
+#home p{
+    font-size:1.5rem;
+    font-family: 'Inspiration', cursive;
+    color:white;
+}
+#instruction{
+    color:white;
+    text-align: center;
+}
+footer{
+    display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    background:black;
+    color:rgb(228, 228, 161);
+    padding:9px 20px;
+}
+    </style>
+</head>
+<body><div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img src="https://raw.githubusercontent.com/Aryasharma001/focp1/main/logo2.png"hieght="80px" width="80px">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      
+        <a href="home.html" target="_blank">Home</a>
+        <a href="#" target="_blank">Videos</a>
+        <a href="" target="_blank">Quick Facts</a>
+        <a href="about.html" target="_blank">About Us</a>
+    </div>
+  </div>
+    <div id="home">
+        <h1>EXSPACE</h1>
+        <p>Explore space with EXSPACE</p>
+    </div>
+    <div id="instruction">
+        <h2>Let's journey through the universe and learn about some members of the space</h2>
+    </div>
+    <div id="container">
+        <div><img src="https://github.com/harshita-lakhchaura/EP/raw/main/quasar.jpg" alt="quasar" height="100px" width="100px" ><a href="Quasars.html" class="w3-bar-item w3-button">Quasars</a></div>
+        <div><img src="https://github.com/harshita-lakhchaura/EP/raw/main/black-hole.jpg" alt="quasar" height="100px" width="100px" ><a href="black.html" class="w3-bar-item w3-button">Black Hole</a></div>
+        <div><img src="https://github.com/harshita-lakhchaura/EP/raw/main/stars.jpg" alt="quasar" height="100px" width="100px" ><a href="stars.html" class="w3-bar-item w3-button">Stars</a></div>
+        <div><img src="https://github.com/harshita-lakhchaura/EP/raw/main/asteroids.jpg" alt="quasar" height="100px" width="100px" ><a href="asteroids.html" class="w3-bar-item w3-button">Asteroids</a></div>
+        <div><img src="https://github.com/harshita-lakhchaura/EP/raw/main/meteorites.jpg" alt="quasar" height="100px" width="100px" ><a href="meteorites.html" class="w3-bar-item w3-button">Meteorites</a></div>
+        <div><img src="https://github.com/harshita-lakhchaura/EP/raw/main/neutron.png" alt="quasar" height="100px" width="100px" ><a href="neutron.html" class="w3-bar-item w3-button">Neutron Stars</a></div>
+        <div><img src="https://github.com/harshita-lakhchaura/EP/raw/main/planets.jpg" alt="quasar" height="100px" width="100px" ><a href="planets.html" class="w3-bar-item w3-button">Planets</a></div>
+        <div><img src="https://github.com/harshita-lakhchaura/EP/raw/main/nebula.jpg" alt="quasar" height="100px" width="100px" ><a href="nebula.html" class="w3-bar-item w3-button">Nebula</a></div>
+      </div>
+        <br>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.exspace.com. All rights reserved
+            </div>
+        </footer>
+</body>
+</html>
