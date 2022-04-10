@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neutron_stars</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            background-color: black;
+            overflow-x: hidden;
+        }
+        .nav {
+  height: 80px;
+  width: 100%;
+  background-color: #0e0101;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 24px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgb(182, 16, 247);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color:black;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(16, 241, 27);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+            #home{
+            display:flex;
+            flex-direction:column;
+            padding:30px 200px;
+            justify-content: center;
+            align-items: center;
+            height:580px;
+        }
+        #home::before{
+    content:"";
+    background: url("https://media.giphy.com/media/3ohc1f8hcZ7LBe2Zzy/giphy.gif") no-repeat center center/cover;
+    position:absolute;
+    height:600px;
+    width:900px;
+    z-index:-1;
+}
+#home h1{
+    font-size:4.5rem;
+    font-family: 'Inspiration', cursive;
+    color: whitesmoke;
+}
+#home p{
+    font-size:1.5rem;
+    font-family: 'Inspiration', cursive;
+    color:whitesmoke;
+}
+.sidenav {
+  height: 1000%; 
+  width: 160px;
+  position: fixed;
+  z-index:1; 
+  top: 100px;
+  left: 0;
+  background-color: black; 
+  overflow-x: hidden;
+  padding-top: 20px;
+  position:fixed;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #bdbbbb;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: black;
+  background:white;
+}
+.information p{
+    color:white;
+    width:100%;
+    overflow-x:hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.information{
+    position:relative;
+    left:180px;
+    top:2px;
+    width: 900px;
+    padding: 10px;
+    border: 5px black;
+    margin: 0;
+}
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+ 
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+ 
+/* Add animation to the slides */
+.slide-wrapper {
+    width: calc(728px * 4);
+ 
+ /* Specify the animation with the
+   duration and speed */
+   animation: slide 20s ease infinite;
+ }
+  
+ /* Set the background color
+ of each of the slides */
+ .slide:nth-child(1) {
+   background: green;
+ }
+  
+ .slide:nth-child(2) {
+   background: pink;
+ }
+  
+ .slide:nth-child(3) {
+   background: red;
+ }
+  
+ .slide:nth-child(4) {
+   background: yellow;
+ }@keyframes slide {
+   
+   /* Calculate the margin-left for
+     each of the slides */
+     20% {
+       margin-left: 0px;
+     }
+    
+     40% {
+       margin-left: calc(-728px * 1);
+     }
+    
+     60% {
+       margin-left: calc(-728px * 2);
+     }
+    
+     80% {
+       margin-left: calc(-728px * 3);
+     }
+   }
+   #gallery{
+       color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;
+   }
+   #learn-heading{
+    color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;   
+   }
+   #learn ol li{
+    color:white;
+    list-style: none;
+    font-size:1.3rem;
+    position:relative;
+    left:180px;
+    top:2px;
+}
+#learn ol li a{
+    color:white;
+    display:block;
+    padding:5px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+footer{
+    display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    background:black;
+    color:rgb(228, 228, 161);
+    padding:9px 20px;
+}
+    </style>
+</head>
+<body><div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img src="https://raw.githubusercontent.com/Aryasharma001/focp1/main/logo2.png"hieght="80px" width="80px">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="#" target="_blank">Home</a>
+      <a href="#" target="_blank">Videos</a>
+      <a href="#" target="_blank">Resources</a>
+      <a href="#" target="_blank">Quick Facts</a>
+      <a href="#" target="_blank">Contact Us</a>
+      <a href="#" target="_blank">About Us</a>
+    </div>
+  </div>
+    <div id="home">
+        <h1>Neutron-Stars</h1>
+        <p>Densest objects astronomers can observe in the observable universe</p>
+    </div>
+    <div class="sidenav">
+        <a href="#" class="w3-bar-item w3-button">Quasars</a>
+        <a href="#" class="w3-bar-item w3-button">Black Hole</a>
+        <a href="#" class="w3-bar-item w3-button">Stars</a>
+        <a href="#" class="w3-bar-item w3-button">Asteroids</a>
+        <a href="#" class="w3-bar-item w3-button">Meteorites</a>
+        <a href="#" class="w3-bar-item w3-button">Neutron Stars</a>
+        <a href="#" class="w3-bar-item w3-button">Planets</a>
+        <a href="#" class="w3-bar-item w3-button">Nebula</a>
+      </div>
+      <div class="information">
+          <p>
+            <h3> stellar phoenix</h3>
+          </p>
+          <p>
+            When stars four to eight times as massive as the sun explode in a violent supernova, their outer layers can blow off in an often-spectacular display, leaving behind a small, dense core that continues to collapse. Gravity presses the material in on itself so tightly that protons and electrons combine to make neutrons, yielding the name "neutron star."<br>
+            Neutron stars pack their mass inside a 20-kilometer (12.4 miles) diameter. They are so dense that a single teaspoon would weigh a billion tons — assuming you somehow managed to snag a sample without being captured by the body's strong gravitational pull. On average, gravity on a neutron star is 2 billion times stronger than gravity on Earth. In fact, it's strong enough to significantly bend radiation from the star in a process known as gravitational lensing, allowing astronomers to see some of the back side of the star.The power from the supernova that birthed it gives the star an extremely quick rotation, causing it to spin several times in a second. Neutron stars can spin as fast as 43,000 times per minute, gradually slowing over time.If a neutron star is part of a binary system that survived the deadly blast from its supernova (or if it captured a passing companion), things can get even more interesting. If the second star is less massive than the sun, it pulls mass from its companion into a Roche lobe, a balloon-like cloud of material that orbits the neutron star. Companion stars up to 10 times the sun's mass create similar mass transfers that are more unstable and don't last as long.
+
+            Stars more than 10 times as massive as the sun transfer material in the form of stellar wind. The material flows along the magnetic poles of the neutron star, creating X-ray pulsations as it is heated.
+            
+            By 2010, approximately 1,800 pulsars had been identified through radio detection, with another 70 found by gamma-rays.
+            <br>
+            Some pulsars even have planets orbiting them — and some may turn into planets.
+            Astronomers know that much about how neutron stars are born. Yet exactly what happens afterwards, inside these ultra-dense cores, remains a mystery. Some researchers theorize that neutrons might dominate all the way down to the centre. Others hypothesize that the incredible pressure compacts the material into more exotic particles or states that squish and deform in unusual ways.
+            <br>
+            Last December, this NASA space observatory provided astronomers with some of the most precise measurements ever made of a neutron star’s mass and radius1,2, as well as unexpected findings about its magnetic field1,3. The NICER team plans to release results about more stars in the next few months. Other data are coming in from gravitational-wave observatories, which can watch neutron stars contort as they crash together. With these combined observations, researchers are poised to zero in on what fills the innards of a neutron star.
+            <br>
+            Neutron stars get more complicated the deeper one goes. Beneath a thin atmosphere made mostly of hydrogen and helium, the stellar remnants are thought to boast an outer crust just a centimetre or two thick that contains atomic nuclei and free-roaming electrons. Researchers think that the ionized elements become packed together in the next layer, creating a lattice in the inner crust. Even further down, the pressure is so intense that almost all the protons combine with electrons to turn into neutrons, but what occurs beyond that is murky at best (see ‘Dense matter’).
+            The hearts of neutron stars will probably always retain some secrets. But physicists now seem well placed to begin peeling back the layers. Read, who is a member of the LIGO team, says that she has collaborated on a project to imagine what scientific questions gravitational-wave detectors would be able to tackle in the 2030s and 2040s. In the process, she realized that the landscape for neutron-star research — in particular, the question of the equation of state — should look very different by then.
+            <br>
+            “It’s been this long-standing puzzle that you figure will always be there,” she says. “Now we’re at a point where I can see the scientific community figuring out the neutron-star-structure puzzle within this decade.
+
+        </p>
+        
+      </div>
+      <br>
+      <div id="gallery">
+          <h1>Photo Gallery</h1>
+      </div>
+      <div id="slideshow">
+        <div class="slide-wrapper">
+          
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://stsci-opo.org/STScI-01EVVK6YCAWD2497VV8PHN504K.jpg" alt="quasar" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/neutrondisk.gif" alt="quasar" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p1843b-m-2000x1250.png" alt="quasar" height="510px" width="728px">
+                    </h1>
+                </div>
+                <div class="slide">
+                    <h1 class="slide-number">
+                        <img src="https://chandra.harvard.edu/photo/2021/j1818/j1818_rollover_525.jpg" alt="quasar" height="510px" width="728px">
+                    </h1>
+                </div>
+                <div class="slide">
+                    <h1 class="slide-number">
+                        <img src="quasar2.jpg" alt="quasar" height="510px" width="728px">
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="learn-heading">
+            <h1>Learn more about Neutron-Stars</h1>
+        </div>
+        <div id="learn">
+            <ol>
+                <li><a href="https://www.nasa.gov/feature/goddard/2018/hubble-uncovers-never-before-seen-features-around-a-neutron-star">Recently spotted neutron-star</a></li>
+                <li><a href="https://www.nasa.gov/mission_pages/GLAST/science/neutron_stars.html">All about Neutron-stars</a></li>
+                <li><a href="https://www.nasa.gov/feature/goddard/2021/nasa-s-nicer-probes-the-squeezability-of-neutron-stars/">https://www.nasa.gov/feature/goddard/2021/nasa-s-nicer-probes-the-squeezability-of-neutron-stars/</a></li>
+            </ol>
+        </div>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.exspace.com. All rights reserved
+            </div>
+        </footer>
+</body>
+</html>
