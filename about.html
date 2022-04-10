@@ -9,8 +9,95 @@
 </head>
 <style>
     html{
-        background-color: black;
-    }
+    background-color: black;
+    }.nav {
+  height: 100px;
+  width: 100%;
+  background-color: #0e0101;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 24px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgb(182, 16, 247);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color:black;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(16, 241, 27);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
     .container{
         display:flex;
         flex-wrap: wrap;
@@ -23,8 +110,7 @@
         background-color:antiquewhite;
         overflow-x: hidden;
         padding: 20px;
-        margin:15px;
-        
+        margin:5px;
     }
     #nav a{
         
@@ -36,7 +122,6 @@
     #nav img{
         padding:2px;
         justify-content: center;
-        border:solid black;
         display:block;
         margin:0 auto;
         height:100px;
@@ -54,20 +139,48 @@
     h3{
         text-align:center;
     }
-    .icon{
-        padding:5px;
-        margin:5px;
-        display:flex;
+    .icon {
+   float: left;
+   width: 25%;
+   padding: 42px;
+   align-items: center;
+   left:100px;
+   
     }
-    .icon:hover{
-        background:rgb(223, 193, 198);
-    }
+    footer{
+    display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    background:black;
+    color:rgb(228, 228, 161);
+    padding:9px 20px;
+}
 </style>
 
 <body>
-    <h1>About Us</h1>
     <div class="container">
-        
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                <img src="https://raw.githubusercontent.com/Aryasharma001/focp1/main/logo2.png"hieght="80px" width="80px">
+              </div>
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+            <div class="nav-links">
+              <a href="home.html" target="_blank">Home</a>
+              <a href="#" target="_blank">Videos</a>
+              <a href="" target="_blank">Quick Facts</a>
+              <a href="about.html" target="_blank">About Us</a>
+            </div>
+          </div>
         <div id="nav">
             
             <img src="https://raw.githubusercontent.com/Anandswati712/Anandswati712/f3369e5cdeb00f6d1dbcbb8a00b1d7d2c56f8b1c/Arya.jpeg" height="100px" width="100px" >
@@ -93,9 +206,13 @@
             <a class="w3-bar-item w3-button">Email:anandswati712@gmail.com</a>
             <a href="https://www.linkedin.com/in/swati-anand-333b93228/" class="icon"><img src="https://github.com/Anandswati712/Anandswati712/raw/main/linkedin.png" height="0px" width="100px"></a>
             <a href="https://github.com/Anandswati712" class="icon"><img src="https://github.com/Anandswati712/Anandswati712/raw/main/github.png" height="0px" width="100px"></a>
-        
         </div>
     </div>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.exspace.com. All rights reserved
+        </div>
+    </footer>
 </body>
 
 </html
