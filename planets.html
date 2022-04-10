@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+    <title>Space</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            background-color: black;
+            overflow-x: hidden;
+        }
+        .nav {
+  height: 80px;
+  width: 100%;
+  background-color: #0e0101;
+  position: fixed;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 24px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgb(182, 16, 247);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color:black;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(16, 241, 27);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+            #home{
+            display:flex;
+            flex-direction:column;
+            padding:30px 200px;
+            justify-content: center;
+            align-items: center;
+            height:580px;
+        }
+        #home::before{
+    content:"";
+    background: url("https://i.pinimg.com/originals/ca/ec/ac/caecacd4e9140b02e01716fe1d725724.gif") no-repeat center center/cover;
+    position:absolute;
+    height:600px;
+    width:900px;
+    z-index:-1;
+}
+#home h1{
+    font-size:4.5rem;
+    font-family: 'Inspiration', cursive;
+    color:white;
+}
+#home p{
+    font-size:1.5rem;
+    font-family: 'Inspiration', cursive;
+    color:white;
+}
+.sidenav {
+  height: 1000%; 
+  width: 160px;
+  position: fixed;
+  z-index:1; 
+  top: 100px;
+  left: 0;
+  background-color: black; 
+  overflow-x: hidden;
+  padding-top: 20px;
+  position:fixed;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #bdbbbb;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: black;
+  background:white;
+}
+.information p{
+    color:white;
+    width:100%;
+    overflow-x:hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.information{
+    position:relative;
+    left:180px;
+    top:2px;
+    width: 900px;
+    padding: 10px;
+    border: 5px black;
+    margin: 0;
+}
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+ 
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+ 
+/* Add animation to the slides */
+.slide-wrapper {
+    width: calc(728px * 4);
+ 
+ /* Specify the animation with the
+   duration and speed */
+   animation: slide 20s ease infinite;
+ }
+  
+ /* Set the background color
+ of each of the slides */
+ .slide:nth-child(1) {
+   background: green;
+ }
+  
+ .slide:nth-child(2) {
+   background: pink;
+ }
+  
+ .slide:nth-child(3) {
+   background: red;
+ }
+  
+ .slide:nth-child(4) {
+   background: yellow;
+ }@keyframes slide {
+   
+   /* Calculate the margin-left for
+     each of the slides */
+     20% {
+       margin-left: 0px;
+     }
+    
+     40% {
+       margin-left: calc(-728px * 1);
+     }
+    
+     60% {
+       margin-left: calc(-728px * 2);
+     }
+    
+     80% {
+       margin-left: calc(-728px * 3);
+     }
+   }
+   #gallery{
+       color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;
+   }
+   #learn-heading{
+    color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;   
+   }
+   #learn ol li{
+    color:white;
+    list-style: none;
+    font-size:1.3rem;
+    position:relative;
+    left:180px;
+    top:2px;
+}
+#learn ol li a{
+    color:white;
+    display:block;
+    padding:5px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+footer{
+    display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    background:black;
+    color:rgb(228, 228, 161);
+    padding:9px 20px;
+}
+@media only screen and (min-width=1234px){
+    .nav{
+        background-color: red;
+    }
+}
+    </style>
+</head>
+<body><div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img src="https://raw.githubusercontent.com/Aryasharma001/focp1/main/logo2.png"hieght="80px" width="80px">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+        <a href="home.html" target="_blank">Home</a>
+        <a href="videos.html" target="_blank">Videos</a>
+        <a href="facts.html" target="_blank">Quick Facts</a>
+        <a href="about.html" target="_blank">About Us</a>
+    </div>
+  </div>
+    <div id="home">
+        <h1>Planets</h1>
+        <p>Large celestial bodies that revolves around the sun</p>
+    </div>
+    <div class="sidenav">
+        <a href="Quasars.html" class="w3-bar-item w3-button">Quasars</a>
+        <a href="black.html" class="w3-bar-item w3-button">Black Hole</a>
+        <a href="stars.html" class="w3-bar-item w3-button">Stars</a>
+        <a href="asteroids.html" class="w3-bar-item w3-button">Asteroids</a>
+        <a href="meteorites.html" class="w3-bar-item w3-button">Meteorites</a>
+        <a href="neutron.html" class="w3-bar-item w3-button">Neutron Stars</a>
+        <a href="planets.html" class="w3-bar-item w3-button">Planets</a>
+        <a href="nebula.html" class="w3-bar-item w3-button">Nebula</a>
+      </div>
+      <div class="information">
+          <p>A planet is a large astronomical body that is neither a star nor a stellar remnant. There are competing scientific definitions of a "planet". In the dynamicist definition adopted by the International Astronomical Union (IAU), a planet is a non-stellar body that is massive enough to be rounded by its own gravity, that directly orbits a star, and that has cleared its orbital zone of competing objects. The IAU has also declared that there are eight planets in the Solar System, independently of the formal definition. In the geological definition used by most planetologists, a planet is a rounded sub-stellar body, possibly a satellite. In addition to the eight Solar planets accepted by the IAU, these include dwarf planets such as Eris and Pluto and planetary-mass moons. Bodies meeting the geological definition are sometimes called "planetary-mass objects" or "planemos" for short.</p>
+          <br>
+          <p>The term planet is ancient, with ties to history, astrology, science, mythology and religion. Apart from the Moon, five planets are visible to the naked eye in the night sky. Planets were regarded by many early cultures as emissaries of deities or as divine themselves. As scientific knowledge advanced, human perception of the planets changed, and the invention of the telescope enabled the discovery of additional planetary objects that were diverse in size, shape and orbit. In 2006, the IAU adopted a resolution limiting the number of planets within the Solar System, though they are not followed by all astronomers, especially planetologists. The IAU resolution is controversial because it excludes many geologically active planetary-mass objects due to where or what they orbit.</p>
+          <br>
+          <p>The eight Solar planets in the IAU definition are divided into two divergent types: large low-density giant planets and small rocky terrestrial planets. In order of increasing distance from the Sun, they are the four terrestrials: Mercury, Venus, Earth, and Mars; and the four giants: Jupiter, Saturn, Uranus, and Neptune. Six are orbited by natural satellites, the two exceptions being the innermost planets Mercury and Venus. Under geophysical definitions, the classification is more complex: the Moon and Jupiter's moons Io and Europa are additional terrestrial planets, but a large number of small icy planets are also added, such as the dwarf planets Ceres and Pluto and the other large giant-planet moons such as Ganymede, Callisto, and Titan.</p>
+          <br>
+          <p>Beginning at the end of the twentieth century, several thousand planets have been discovered orbiting other stars. These are referred to as "extrasolar planets", or "exoplanets" for short. As of 1 April 2022, 4,984 extrasolar planets have been discovered in 3,673 planetary systems. The count includes 815 multi-planetary systems. Known exoplanets range in size from gas giants about twice as large as Jupiter down to just over the size of the Moon. More than 100 of these planets are approximately the same size as Earth, nine of which orbit in the habitable zone of their star. In 2011, the Kepler Space Telescope team reported the discovery of the first Earth-sized extrasolar planets orbiting a Sun-like star, Kepler-20e and Kepler-20f. A 2012 study, analyzing gravitational microlensing data, estimates a minimum of 1.6 bound planets on average for every star in the Milky Way. As of 2013, one in five Sun-like stars is thought to have an Earth-sized planet in its habitable zone.</p>
+      </div>
+      <br>
+      <div id="gallery">
+          <h1>Photo Gallery</h1>
+      </div>
+      <div id="slideshow">
+        <div class="slide-wrapper">
+          
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/harshita-lakhchaura/EP/raw/main/planet1.jpg" alt="planet1" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/harshita-lakhchaura/EP/raw/main/planet4.gif" alt="planet2" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/harshita-lakhchaura/EP/raw/main/planet2.jpg" alt="planet3" height="510px" width="728px">
+                    </h1>
+                </div>
+                <div class="slide">
+                    <h1 class="slide-number">
+                        <img src="https://github.com/harshita-lakhchaura/EP/raw/main/planet3.png" alt="planet4" height="510px" width="728px">
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="learn-heading">
+            <h1>Learn more about planets</h1>
+        </div>
+        <div id="learn">
+            <ol>
+                <li><a href="https://www.britannica.com/science/planet">https://www.britannica.com/science/planet</a></li>
+                <li><a href="https://kids.nationalgeographic.com/space/article/what-is-a-planet">https://kids.nationalgeographic.com/space/article/what-is-a-planet</a></li>
+                <li><a href="https://www.planetary.org/worlds">https://www.planetary.org/worlds</a></li>
+            </ol>
+        </div>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.exspace.com. All rights reserved
+            </div>
+        </footer>
+</body>
+</html>
