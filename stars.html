@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+    <title>Space</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            background-color: black;
+            overflow-x: hidden;
+        }
+        .nav {
+  height: 80px;
+  width: 100%;
+  background-color: #0e0101;
+  position: fixed;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 24px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgb(182, 16, 247);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color:black;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(16, 241, 27);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+            #home{
+            display:flex;
+            flex-direction:column;
+            padding:30px 200px;
+            justify-content: center;
+            align-items: center;
+            height:580px;
+        }
+        #home::before{
+    content:"";
+    background: url("https://github.com/Anandswati712/Anandswati712/raw/main/star2.gif") no-repeat center center/cover;
+    position:absolute;
+    height:600px;
+    width:900px;
+    z-index:-1;
+}
+#home h1{
+    font-size:4.5rem;
+    font-family: 'Inspiration', cursive;
+    font-size: 4.5rem;
+    color: #eee;
+}
+#home p{
+    font-size:1.5rem;
+    font-family: 'Inspiration', cursive;
+    color: #bdbbbb;
+}
+.sidenav {
+  height: 1000%; 
+  width: 160px;
+  position: fixed;
+  z-index:1; 
+  top: 100px;
+  left: 0;
+  background-color: black; 
+  overflow-x: hidden;
+  padding-top: 20px;
+  position:fixed;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #bdbbbb;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: black;
+  background:white;
+}
+.information p{
+    color:white;
+    width:100%;
+    overflow-x:hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.information{
+    position:relative;
+    left:180px;
+    top:2px;
+    width: 900px;
+    padding: 10px;
+    border: 5px black;
+    margin: 0;
+}
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+ 
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+ 
+/* Add animation to the slides */
+.slide-wrapper {
+    width: calc(728px * 4);
+ 
+ /* Specify the animation with the
+   duration and speed */
+   animation: slide 20s ease infinite;
+ }
+  
+ /* Set the background color
+ of each of the slides */
+ .slide:nth-child(1) {
+   background: green;
+ }
+  
+ .slide:nth-child(2) {
+   background: pink;
+ }
+  
+ .slide:nth-child(3) {
+   background: red;
+ }
+  
+ .slide:nth-child(4) {
+   background: yellow;
+ }@keyframes slide {
+   
+   /* Calculate the margin-left for
+     each of the slides */
+     20% {
+       margin-left: 0px;
+     }
+    
+     40% {
+       margin-left: calc(-728px * 1);
+     }
+    
+     60% {
+       margin-left: calc(-728px * 2);
+     }
+    
+     80% {
+       margin-left: calc(-728px * 3);
+     }
+   }
+   #gallery{
+       color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;
+   }
+   #learn-heading{
+    color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;   
+   }
+   #learn ol li{
+    color:white;
+    list-style: none;
+    font-size:1.3rem;
+    position:relative;
+    left:180px;
+    top:2px;
+}
+#learn ol li a{
+    color:white;
+    display:block;
+    padding:5px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+footer{
+    display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    background:black;
+    color:rgb(228, 228, 161);
+    padding:9px 20px;
+}
+    </style>
+</head>
+<body><div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img src="https://raw.githubusercontent.com/Aryasharma001/focp1/main/logo2.png"hieght="80px" width="80px">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="#" target="_blank">Home</a>
+      <a href="#" target="_blank">Videos</a>
+      <a href="#" target="_blank">Quick Facts</a>
+      <a href="#" target="_blank">About Us</a>
+    </div>
+  </div>
+    <div id="home">
+        <h1>Stars</h1>
+        <p>Are  huge celestial bodies made mostly of hydrogen and helium</p>
+    </div>
+    <div class="sidenav">
+        <a href="#" class="w3-bar-item w3-button">Quasars</a>
+        <a href="#" class="w3-bar-item w3-button">Black Hole</a>
+        <a href="#" class="w3-bar-item w3-button">Stars</a>
+        <a href="#" class="w3-bar-item w3-button">Asteroids</a>
+        <a href="#" class="w3-bar-item w3-button">Meteorites</a>
+        <a href="#" class="w3-bar-item w3-button">Neutron Stars</a>
+        <a href="#" class="w3-bar-item w3-button">Planets</a>
+        <a href="#" class="w3-bar-item w3-button">Nebula</a>
+      </div>
+      <div class="information">
+          <p>A star is an astronomical object comprising a luminous spheroid of plasma held together by its gravity. The nearest star to Earth is the Sun. Many other stars are visible to the naked eye at night, but their immense distance from Earth makes them appear as fixed points of light in the sky. The most prominent stars have been categorised into constellations and asterisms, and many of the brightest stars have proper names. Astronomers have assembled star catalogues that identify the known stars and provide standardized stellar designations. The observable universe contains an estimated 1022 to 1024 stars. Still, most are invisible to the naked eye from Earth, including all individual stars outside our galaxy, the Milky Way.
+
+            <br><br>A star's life begins with the gravitational collapse of a gaseous nebula of material composed primarily of hydrogen, along with helium and trace amounts of heavier elements. The total mass is the main factor determining its evolution and eventual fate. A star shines for most of its active life due to the thermonuclear fusion of hydrogen into helium in its core. This process releases energy that traverses the star's interior, radiating into outer space. At the end of a star's lifetime, its core becomes a stellar remnant: a white dwarf, a neutron star, or—if it is sufficiently massive—a black hole.</p>
+    
+          <p>Stellar nucleosynthesis in stars or their remnants creates almost all naturally occurring chemical elements heavier than lithium. Stellar mass loss or supernova explosions return chemically enriched material to the interstellar medium. They are then recycled into new stars. Astronomers can determine stellar properties—including mass, age, metallicity (chemical composition), variability, distance, and motion through space—by carrying out observations of a star's apparent brightness, spectrum, and changes in its position in the sky over time.
+          </p><br>
+          
+          <p>Many stars vary in the amount of light they radiate. Stars such as Altair, Alpha Centauri A and B, and Procyon A are called dwarf stars; their dimensions are roughly comparable to those of the Sun. Sirius A and Vega, though much brighter, also are dwarf stars; their higher temperatures yield a larger rate of emission per unit area. Aldebaran A, Arcturus, and Capella A are examples of giant stars, whose dimensions are much larger than those of the Sun. Observations with an interferometer (an instrument that measures the angle subtended by the diameter of a star at the observer’s position), combined with parallax measurements (which yield a star’s distance; see below Determining stellar distances), give sizes of 12 and 22 solar radii for Arcturus and Aldebaran A. Betelgeuse and Antares A are examples of supergiant stars. The latter has a radius some 300 times that of the Sun, whereas the variable star Betelgeuse oscillates between roughly 300 and 600 solar radii. Several of the stellar class of white dwarf stars, which have low luminosities and high densities, also are among the brightest stars. Sirius B is a prime example, having a radius one-thousandth that of the Sun, which is comparable to the size of Earth. Also among the brightest stars are Rigel A, a young supergiant in the constellation Orion, and Canopus, a bright beacon in the Southern Hemisphere often used for spacecraft navigation.</p>
+      </div>
+      <br>
+      <div id="gallery">
+          <h1>Photo Gallery</h1>
+      </div>
+      <div id="slideshow">
+        <div class="slide-wrapper">
+          
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/Anandswati712/Anandswati712/raw/main/stars1.jpg" alt="stars" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/Anandswati712/Anandswati712/raw/main/stars3..jpg" alt="stars" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/Anandswati712/Anandswati712/raw/main/stars4.jpg" alt="stars" height="510px" width="728px">
+                    </h1>
+                </div>
+                <div class="slide">
+                    <h1 class="slide-number">
+                        <img src="https://github.com/Anandswati712/Anandswati712/raw/main/star.jpg" alt="stars" height="510px" width="728px">
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="learn-heading">
+            <h1>Learn more about stars</h1>
+        </div>
+        <div id="learn">
+            <ol>
+                <li><a href="https://science.nasa.gov/astrophysics/focus-areas/how-do-stars-form-and-evolve">https://science.nasa.gov</a></li>
+                <li><a href="https://www.isro.gov.in/astrosat">https://www.isro.gov.in</a></li>
+                <li><a href="https://www.space.com/57-stars-formation-classification-and-constellations.html">https://www.space.com</a></li>      </ol>
+        </div>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.exspace.com. All rights reserved
+            </div>
+        </footer>
+</body>
+</html>

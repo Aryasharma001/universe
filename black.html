@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+    <title>Space</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            background-color: black;
+            overflow-x: hidden;
+        }
+        .nav {
+  height: 80px;
+  width: 100%;
+  background-color: #0e0101;
+  position:fixed;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 24px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgb(182, 16, 247);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color:black;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(16, 241, 27);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+            #home{
+            display:flex;
+            flex-direction:column;
+            padding:30px 200px;
+            justify-content: center;
+            align-items: center;
+            height:580px;
+        }
+        #home::before{
+    content:"";
+    background: url("https://github.com/Anandswati712/Anandswati712/raw/main/blackhole.gif") no-repeat center center/cover;
+    position:absolute;
+    height:600px;
+    width:900px;
+    z-index:-1;
+}
+#home h1{
+    font-size:4.5rem;
+    font-family: 'Inspiration', cursive;
+    font-size: 4.5rem;
+    color: #eee;
+}
+#home p{
+    font-size:1.5rem;
+    font-family: 'Inspiration', cursive;
+    color: #bdbbbb;
+}
+.sidenav {
+  height: 1000%; 
+  width: 160px;
+  position: fixed;
+  z-index:1; 
+  top: 100px;
+  left: 0;
+  background-color: black; 
+  overflow-x: hidden;
+  padding-top: 20px;
+  position:fixed;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #bdbbbb;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: black;
+  background:white;
+}
+.information p{
+    color:white;
+    width:100%;
+    overflow-x:hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.information{
+    position:relative;
+    left:180px;
+    top:2px;
+    width: 900px;
+    padding: 10px;
+    border: 5px black;
+    margin: 0;
+}
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+ 
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+ 
+/* Add animation to the slides */
+.slide-wrapper {
+    width: calc(728px * 4);
+ 
+ /* Specify the animation with the
+   duration and speed */
+   animation: slide 20s ease infinite;
+ }
+  
+ /* Set the background color
+ of each of the slides */
+ .slide:nth-child(1) {
+   background: green;
+ }
+  
+ .slide:nth-child(2) {
+   background: pink;
+ }
+  
+ .slide:nth-child(3) {
+   background: red;
+ }
+  
+ .slide:nth-child(4) {
+   background: yellow;
+ }@keyframes slide {
+   
+   /* Calculate the margin-left for
+     each of the slides */
+     20% {
+       margin-left: 0px;
+     }
+    
+     40% {
+       margin-left: calc(-728px * 1);
+     }
+    
+     60% {
+       margin-left: calc(-728px * 2);
+     }
+    
+     80% {
+       margin-left: calc(-728px * 3);
+     }
+   }
+   #gallery{
+       color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;
+   }
+   #learn-heading{
+    color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;   
+   }
+   #learn ol li{
+    color:white;
+    list-style: none;
+    font-size:1.3rem;
+    position:relative;
+    left:180px;
+    top:2px;
+}
+#learn ol li a{
+    color:white;
+    display:block;
+    padding:5px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+footer{
+    display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    background:black;
+    color:rgb(228, 228, 161);
+    padding:9px 20px;
+}
+    </style>
+</head>
+<body><div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img src="https://raw.githubusercontent.com/Aryasharma001/focp1/main/logo2.png"hieght="80px" width="80px">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="#" target="_blank">Home</a>
+      <a href="#" target="_blank">Videos</a>
+      <a href="#" target="_blank">Quick Facts</a>
+      <a href="#" target="_blank">About Us</a>
+    </div>
+  </div>
+    <div id="home">
+        <h1>Blackhole</h1>
+        <p>A cosmic body of extremely intense gravity</p>
+    </div>
+    <div class="sidenav">
+        <a href="#" class="w3-bar-item w3-button">Quasars</a>
+        <a href="#" class="w3-bar-item w3-button">Black Hole</a>
+        <a href="#" class="w3-bar-item w3-button">Stars</a>
+        <a href="#" class="w3-bar-item w3-button">Asteroids</a>
+        <a href="#" class="w3-bar-item w3-button">Meteorites</a>
+        <a href="#" class="w3-bar-item w3-button">Neutron Stars</a>
+        <a href="#" class="w3-bar-item w3-button">Planets</a>
+        <a href="#" class="w3-bar-item w3-button">Nebula</a>
+      </div>
+      <div class="information">
+          <p>A black hole is a place in space where gravity pulls so much that even light can not get out. The gravity is
+            so strong because matter has been squeezed into a tiny space. This can happen when a star is dying. <br>
+            Because no light can get out, people can't see black holes. They are invisible. Space telescopes with
+            special tools can help find black holes. The special tools can see how stars that are very close to black
+            holes act differently than other stars.</p>
+          <br>
+          <p>Scientists think the smallest black holes formed when the universe began.
+            Stellar black holes are made when the center of a very big star falls in upon itself, or collapses. When
+            this happens, it causes a supernova. A supernova is an exploding star that blasts part of the star into
+            space.</p>
+          <br>
+            seen with human eyes. Scientists use satellites and telescopes in space to see the high-energy light.</p>
+            <p></p>
+          <br>
+          <p>Satellites and telescopes that are traveling in space to learn more about black holes. These spacecraft help
+            scientists answer questions about the universe.<br>Small black holes populate the universe, but their cousins, supermassive black holes, dominate. These enormous black holes are millions or even billions of times as massive as the sun, but are about the same size in diameter. Such black holes are thought to lie at the center of pretty much every galaxy, including the Milky Way.
+
+            Scientists aren't certain how such large black holes spawn. Once these giants have formed, they gather mass from the dust and gas around them, material that is plentiful in the center of galaxies, allowing them to grow to even more enormous sizes.
+            
+            Supermassive black holes may be the result of hundreds or thousands of tiny black holes that merge together. Large gas clouds could also be responsible, collapsing together and rapidly accreting mass. A third option is the collapse of a stellar cluster, a group of stars all falling together. Fourth, supermassive black holes could arise from large clusters of dark matter. This is a substance that we can observe through its gravitational effect on other objects; however, we don't know what dark matter is composed of because it does not emit light and cannot be directly observed.</p>
+      </div>
+      <br>
+      <div id="gallery">
+          <h1>Photo Gallery</h1>
+      </div>
+      <div id="slideshow">
+        <div class="slide-wrapper">
+          
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/Anandswati712/Anandswati712/raw/main/blackhole.jpg" alt="blackhole" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/Anandswati712/Anandswati712/raw/main/blackhole2.jpg" alt="blackhole" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://github.com/Anandswati712/Anandswati712/raw/main/blackhole3.jpg" alt="blackhole" height="510px" width="728px">
+                    </h1>
+                </div>
+                <div class="slide">
+                    <h1 class="slide-number">
+                        <img src="https://github.com/Anandswati712/Anandswati712/raw/main/blackhole4.jpg" alt="blackhole" height="510px" width="728px">
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="learn-heading">
+            <h1>Learn more about blackhole</h1>
+        </div>
+        <div id="learn">
+            <ol>
+                <li><a href="https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-a-black-hole-k4.html">https://www.nasa.gov.html</a></li>
+                <li><a href="https://www.isro.gov.in/pslv-c30-astrosat-mission/astrosat-observes-high-energy-x-ray-variability-of-black-hole-system#:~:text=C30%2FAstroSat%20Mission-,AstroSat%20observes%20the%20high%20energy%20X%2Dray%20variability%20of%20a,from%20a%20black%20hole%20system.">https://www.isro.gov.in</a></li>
+                <li><a href="https://www.nationalgeographic.com/science/article/black-holes">https://www.nationalgeographic.com/science/article/black-holes</a></li>
+            </ol>
+        </div>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.exspace.com. All rights reserved
+            </div>
+        </footer>
+</body>
+</html>
