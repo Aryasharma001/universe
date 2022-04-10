@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nebula</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            background-color: black;
+            overflow-x: hidden;
+        }
+        .nav {
+  height: 80px;
+  width: 100%;
+  background-color: #0e0101;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 24px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgb(182, 16, 247);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color:black;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(16, 241, 27);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+            #home{
+            display:flex;
+            flex-direction:column;
+            padding:30px 200px;
+            justify-content: center;
+            align-items: center;
+            height:580px;
+        }
+        #home::before{
+    content:"";
+    background: url("https://media.giphy.com/media/Rudd6VAX5XyRa/giphy.gif") no-repeat center center/cover;
+    position:absolute;
+    height:600px;
+    width:900px;
+    z-index:-1;
+}
+#home h1{
+    font-size:4.5rem;
+    font-family: 'Inspiration', cursive;
+    color: whitesmoke;
+}
+#home p{
+    font-size:1.5rem;
+    font-family: 'Inspiration', cursive;
+    color: whitesmoke;
+}
+.sidenav {
+  height: 1000%; 
+  width: 160px;
+  position: fixed;
+  z-index:1; 
+  top: 100px;
+  left: 0;
+  background-color: black; 
+  overflow-x: hidden;
+  padding-top: 20px;
+  position:fixed;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #bdbbbb;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: black;
+  background:white;
+}
+.information p{
+    color:white;
+    width:100%;
+    overflow-x:hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.information{
+    position:relative;
+    left:180px;
+    top:2px;
+    width: 900px;
+    padding: 10px;
+    border: 5px black;
+    margin: 0;
+}
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+ 
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+ 
+/* Add animation to the slides */
+.slide-wrapper {
+    width: calc(728px * 4);
+ 
+ /* Specify the animation with the
+   duration and speed */
+   animation: slide 20s ease infinite;
+ }
+  
+ /* Set the background color
+ of each of the slides */
+ .slide:nth-child(1) {
+   background: green;
+ }
+  
+ .slide:nth-child(2) {
+   background: pink;
+ }
+  
+ .slide:nth-child(3) {
+   background: red;
+ }
+  
+ .slide:nth-child(4) {
+   background: yellow;
+ }@keyframes slide {
+   
+   /* Calculate the margin-left for
+     each of the slides */
+     20% {
+       margin-left: 0px;
+     }
+    
+     40% {
+       margin-left: calc(-728px * 1);
+     }
+    
+     60% {
+       margin-left: calc(-728px * 2);
+     }
+    
+     80% {
+       margin-left: calc(-728px * 3);
+     }
+   }
+   #gallery{
+       color:white;
+       display:flex;
+        flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;
+   }
+   #learn-heading{
+    color:white;
+       display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+       font-size:1.5rem;   
+   }
+   #learn ol li{
+    color:white;
+    list-style: none;
+    font-size:1.3rem;
+    position:relative;
+    left:180px;
+    top:2px;
+}
+#learn ol li a{
+    color:white;
+    display:block;
+    padding:5px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+footer{
+    display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    background:black;
+    color:rgb(228, 228, 161);
+    padding:9px 20px;
+}
+    </style>
+</head>
+<body><div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img src="https://media.giphy.com/media/MXQnyEQwBJ6eTj90L5/giphy.gif"hieght="80px" width="80px">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="#" target="_blank">Home</a>
+      <a href="#" target="_blank">Videos</a>
+      
+      <a href="#" target="_blank">Quick Facts</a>
+      <a href="#" target="_blank">Contact Us</a>
+      <a href="#" target="_blank">About Us</a>
+    </div>
+  </div>
+    <div id="home">
+        <h1>Meteorites</h1>
+        <p>rock that falls to Earth from space</p>
+    </div>
+    <div class="sidenav">
+        <a href="#" class="w3-bar-item w3-button">Quasars</a>
+        <a href="#" class="w3-bar-item w3-button">Black Hole</a>
+        <a href="#" class="w3-bar-item w3-button">Stars</a>
+        <a href="#" class="w3-bar-item w3-button">Asteroids</a>
+        <a href="#" class="w3-bar-item w3-button">Meteorites</a>
+        <a href="#" class="w3-bar-item w3-button">Neutron Stars</a>
+        <a href="#" class="w3-bar-item w3-button">Planets</a>
+        <a href="#" class="w3-bar-item w3-button">Nebula</a>
+      </div>
+      <div class="information">
+          <p>
+            In simplest terms, a meteorite is a rock that falls to Earth from space. Meteorites are rocks, but they are not like Earth rocks. Most are far older, and they provide some of the only samples we have of other worlds – other planets, asteroids and possibly comets – in our solar system. Some meteorites even contain tiny particles that formed around other stars that existed before our Sun.
+            <br>
+            All meteorites come from inside our solar system. Most of them are fragments of asteroids that broke apart long ago in the asteroid belt, located between Mars and Jupiter. Such fragments orbit the Sun for some time–often millions of years–before colliding with Earth.
+            <br>
+            Meteorites can be huge: the biggest one ever found weighs around 60 tons, roughly twice as much as the Ahnighito meteorite at the center of this room. People have also found meteorites that are quite small, about the size of beach pebbles or even grains of sand.
+            Fossil" meteorites are sometimes discovered by geologists. They represent the highly weathered remains of meteorites that fell to Earth in the remote past and were preserved in sedimentary deposits sufficiently well that they can be recognized through mineralogical and geochemical studies. One limestone quarry in Sweden has produced an anomalously large number — exceeding one hundred — fossil meteorites from the Ordovician, nearly all of which are highly weathered L-chondrites that still resemble the original meteorite under a petrographic microscope, but which have had their original material almost entirely replaced by terrestrial secondary mineralization. The extraterrestrial provenance was demonstrated in part through isotopic analysis of relict spinel grains, a mineral that is common in meteorites, is insoluble in water, and is able to persist chemically unchanged in the terrestrial weathering environment. Scientists believe that these meteorites, which have all also been found in Russia and China, all orignated from the same source, a collision that occurred somewhere between Jupiter and Mars.[32] One of these fossil meteorites, dubbed Österplana 065, appears to represent a distinct type of meteorite that is "extinct" in the sense that it is no longer falling to Earth, the parent body having already been completely depleted from the reservoir of near-Earth objects.
+            <br>
+            In medieval China during the Song dynasty, a meteorite strike event was recorded by Shen Kuo in 1064 AD near Changzhou. He reported "a loud noise that sounded like a thunder was heard in the sky; a giant star, almost like the moon, appeared in the southeast" and later finding the crater and the still-hot meteorite within, nearby.Two of the oldest recorded meteorite falls in Europe are the Elbogen (1400) and Ensisheim (1492) meteorites. The German physicist, Ernst Florens Chladni, was the first to publish (in 1794) the idea that meteorites might be rocks that originated not from Earth, but from space.[75] His booklet was "On the Origin of the Iron Masses Found by Pallas and Others Similar to it, and on Some Associated Natural Phenomena".[76] In this he compiled all available data on several meteorite finds and falls concluded that they must have their origins in outer space. The scientific community of the time responded with resistance and mockery.[77] It took nearly ten years before a general acceptance of the origin of meteorites was achieved through the work of the French scientist Jean-Baptiste Biot and the British chemist, Edward Howard.[78] Biot's study, initiated by the French Academy of Sciences, was compelled by a fall of thousands of meteorites on 26 April 1803 from the skies of L'Aigle, France
+
+             
+
+
+        </p>
+        
+      </div>
+      <br>
+      <div id="gallery">
+          <h1>Photo Gallery</h1>
+      </div>
+      <div id="slideshow">
+        <div class="slide-wrapper">
+          
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://solarsystem.nasa.gov/system/resources/list_images/712_28313667323_e4dbcf550c_320.jpg" alt="quasar" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="https://solarsystem.nasa.gov/system/resources/list_images/435_PallasThumbnail.jpg" alt="quasar" height="510px" width="728px">
+                </h1>
+            </div>
+            <div class="slide">
+                <h1 class="slide-number">
+                    <img src="data:image/jpeg;base64,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" alt="quasar" height="510px" width="728px">
+                    </h1>
+                </div>
+                <div class="slide">
+                    <h1 class="slide-number">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgWFRUYGRgYHBoYHBocHBwYGhwYGhoaGhwYHhwcIS4lHCMrHxgcJjgmKy80NTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHjQrJSs0NDQ0NDE0NDQ2NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQxNDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUCAwYBB//EADoQAAEDAgQEBAMHBAICAwAAAAEAAhEDIQQSMUEFUWFxBiKBkTKh8BNCUrHB0eEUI2LxB5KCsiRyov/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACYRAQEBAQACAwAABQUAAAAAAAABAhEDIRIxQRMiUXGhBDJhsfH/2gAMAwEAAhEDEQA/APjKIiAiIgIiICIiAiIAgLJjJWbGTYC6lsw31/tXgwoUgBIN+fJbmU7k97aLdSpDQCfrc/srFmFyjM4W5RH17koIlDCl23r9a91MZTjysbPM3A9x/s9FtYZ6DYaz3+vkpmHw7j5nSAPfuYmOyCNh8A6ZJE+wHQN29blSH0Mth5ncrgDudBt+xW6s/KLANPMiY52KhPxLp8rtdxLiefww1vYAeq1mWpayxDHAjO9jAdbgPMbCdlPwtNjY8oJcYEuJNxJkT+yiMp3Be085PlE+1/cLd/bBIzCwkmNOneV0530z1aUvs2hwAywddbk9Nf2W3D0GEywuOYTGhy9JHaw5Kt4e3MBNmtmJEuvqe56/JdD4WwbMzoYJdq4mTF5J+tkufjLVl60v4c8+TKGZz8WYuhgnM4mLfwo/GqzWN/pqPwg+Z95ees7Cw9+q6DxDxhlJuSlBe62Y6gAibbDlzPZcrQpl7i43JXo8GLf5tfTnu89Rlw/CSQuio0DrEclaYLhIoUmPfIe+8bhnLTUz6WW/C4UFo2JPb1PRdvnL7n0z8eNeBwzSHPqOy06bS55PK9u5K+XcaxhxFVzyIGjByYNB+vqu38b8WGQYWkbSHVHbuIAyt6C0x26riRQXg83kurz8d8Z5Oq/7Ja3UlaGgtT6K4OnFU+ko76atn01GqU0TiqexR3sVjUYotRiohwi3ZEROIqIiIIiICIiAiQt9ClMmDbTurweMoE6fX7rYKQFrEqxbhyAOt+t+2qyZQ/C2fy9tvUpBHp0nfd/j1UnD4YE3v12/nsFtoMDjBcHc2tuB3On1opbZ+4LaZjZo7u37D56KhkyxFt4H86D27hZU6D3kEz0F4H6lS8LTA0l7tS42b89O/tCkVGEggud1IOQDoCYzHukEdjGMBc5wc4a6GP8AxBsO/wAtFro1A673OH4QDFvTc6LXXAcMlJpN4JmQABryJ63C3YbCZD5i3MYOUQSByJi36rpMzjPW37JjjLyYNgCbdgIk6q6wPDGtbDLE8gJHysqltJxMw3udB2XQcLrtaILwTpA/M/sFLLz0RjXoZGFznNIG5gSRfQWPdUzKBqCcuUciItznlG51Pa9w8vqPLPKGyZnKI5H61VrgeHMZ5i7O4XgaDqSbN7lazfjP+UvtV4LhsnSGak6dLbyf2V/Xf9iwtpQH5bn8IAsCTaSf35BaGVJf5S0nVzvuMbOx+8TpPtspGLwheCPu6mdzzd16bW5Kyds+R9T05vhHBamJl4cC8ugh0ybDzTfmu34V4YFDM+o5r8jZaNs2xM7Lb4fwX2LTlgEiZdYE8z+w9VjxFlYHK8/Ec0TMnSTFhA0C73d3r4y8jMzJOo1bFOquDn7DTad1hxTiLaFIvN3v8rQdztbkNT6DdSnYcMY57yGsYJcflA5kmwC4biONdXqF5s0WY38Lf3OpU83kznPxz9tYzdXtQAwuJLjJcSSeZO6zFBTsPh5U4cPPLVfPteniiNBaH0V0NTAkbKDWoQnTiiq0lDq01d1qagVmKs2KeqxQqjFcYlo2CrqzUjNQMqLbCKiqRekQvQ1GWKL2F6AtSDyF6GrMNtr6L0BbmWbWIarnhmG31EdLlVjGczH1orDCn7rC9s78/wBVdZ9EqRjcRkOUQ5x5ico5ALzD4Rz4NZzsuoYNT6WDflopWH4Y1t9Xddu/16qYzDN1Jm+2nSB949/QrHZPpUdjJ8rWjLsxtmdC5wu89vlopIpQZeS8+zW9gLBbm1wJa0ZdrDM88+jfrVYyPiAdHOJd6Gbe26slTqWyoGicul4iDfpstroIl4AMdy3v+3+lhQwZPmdYDmSSOw0Hdb2UBcjT8zyA0nqU+MOotSgyLF0H0mPzWmk+DlYwSSYb8U8idotN1ux3l3l0Xv5W/wCPVV1SrYAlrQ4nncf5HV3rbsu+MWxjWuJLQxzvPWaTNwCNeQJt7KVhcZTY+1+Qa4enxQEwHCmHKXxfQ7T3G1vkuhwnD6GYQGuPSJj65q6uZ69pJUejVqvj7HDZiLZnXaPU2Klt4dWe8MqvzFsFzW2ptJvAFsx0MnRdJQloGQANF45NAm0bqMx5yw1hg6F0tBA52mCT6rlLb9Ruz+rOhgxrEMbfq52mY9OXorPCUoGZw10kX9llwzCudd7tNgIDezefLU3UHjGOLnhjJgHbnvJ+t1vObrXIW8nVhWxYa0llyCMrnDSdS2f/AKjbcKJkc93mdoMznExDQJmdgBP1CxpYGZzOmNYMgc5dpMDQcuhXJeKPEYeTQoHyCz3D75B+EHdo+cclvWs+Odn2kl1TxFxr7dwp0z/ZYbf5v0Lz+QHJQcNTUDDq4wQuvDrVt7XpzOel5wnh+Yiy7LD8FZlEhQPDNMLqQuEl1qrvXx9Rz+M4G2LLj+KcOLSZC+nuXIeJhcwnLnXDOvlPb59iaUKsxDQrjGC6qa67RKqq7VX1wrKuq+uqxUKEXqKjCrhmzLy1p/6/LX5eq0sY2fKZPQKMWQsmtI6LtMOfWddo3seQWtjRusiwbLbTpzYC/Pl+y3M8jN0ypYYGL/upL+GxF7nXS3zXn9BAu8E7xeO5VlgOHOOrYZqZN3HmRsB3Wb699WK+hhCfgFvxusOpA5dVa0MMGXOp30/1+asWtFsoB5QdOp91n9gcxkRz5mDoPrms3XVkQntES8wOVwO5G/ZeupvLQ5pLW3Non3VvguHlxJgmOf6DkrB1NliGAn0cHagCPfl1U7z6OOZwOHc4Zg5oB3c5pcLW3P6K9wfnlstsAQdiDyPoomOYwVDplFnnlOwi5PJT+FGQXEiXukxqxg0badonfzLdnZ0iVhqZygu+GbwJ9fqFU8UrNc+wDWtkAWEQNe559lbcT4k1jZcMsSBIF3c+4uY6hcVVqZ6jjNjm1MCcp9BddPB4rr+asb3J6YYjFZoDQMo6a3sO37qa2gHljPLP3nA2vqASY9rKLhaRMON7gBuhtpfWLnS5hW/CsK3zZocHAi0/ERI0Ex0XrsmZ6cJbftGpY17nllN2UTaJt1/nddtgHBmUGJ1cd4HzXNYfgr5loAHWx9usxzXR8Lw7GHzQ95MZdLD5uXPyZzZ6dM2z7X2CxJdLgIvdzjAFvmplDF05tL3uMCBAB9bDuqHiGKc4i2UaNaBAH89VGolwMh2TkZgx06LGfB2dq3fHS8V4qW/2mWdF8l5cdp5fP9Y1HAHLmc4XJl07AfC3nob3094+EZSYwuqDMRJLnGABzdfyt+ZjbRfPvFfjH7YupUCQzRzxbMN2tGzfzTVninJ/6s7qrfxX4tzg4fDuhmj3t+9/g08rXO/ZcvQKq6DlYUHLw73dXtejM4t8O5W+CddU2HcBqp9Ov6LLpH0DgHEGtgLraWIa4WK+SYTFlu6usPxlwGq43Os3sWya+30CviGtBMrhuPY3MStNbjTiIJVFjMTJTMt13RJMz0iYl6qsQ5S69RV1d67M1DrlV9cqZWcoFdyMVGlFjK9VEcjmV61srKjTlwHNXruENLYaTzLiLW5nZey8z9vPO1TMpNM3AA3O5PIbqZhsG58Bnlb63PPr7rxmFLCczMwG4JA9910fCqRyz9iGEkZbw1x9B81nV5PS59lDAABvTcCJPILY+g7TKY3EX9evsrLE4cGDJnePq4WzCcOfM5Z5Fw+et1w7+uiDh8I65aWt3MifmIv6ra9jrQWk9BHuQZ9yr6jwUm73k9rD3hSS2nSaXQABu0Zj/wBrn2Cny/occ/RwLyJcIB1gHzdybn5StmOa9jCYay1s5yn0ZMx0srVnGKJE+YwYM7nvrbquR47xknMIDGcrFxHeJK6YzbffqJqyT0iMDnNJlxvMgaAi97gGxJHW6ufDvDnkghxDBeCZJIO3KT+q42l4heyzGtjcOlw10iYOy6fgni17G5n0GPY28MbkNxq2DEgzYjTeVrfmnLImcfte+JDneGAEZCARtLthzuqalQGYgzF7jpcnTTougp12YgvfSqtkTZ4LHNzEAEwC0gcwYW/C+HKmX7j89nPgvDGyLtIvJvtoNV6vF5cTPOxx3jXe8RcFwlxpsqZi7M4gGXamRfvlcN7i8KUMO1riM8kbN6Dc7m5V5g2/ZUPs2l7mtzPJjK3cDKHH4RJuRcutEwqVjGk+W0nVxmOs/wALpj+a2/jOuZkSKLHWIBAFwTe5sOyk5BbNc3gttJ2Frk9FuwnD6lZwa1moGUkQI/GR17LoK/DmYdgByGpGm8AdI19yJ2mLrWc2T9JLZ38c/RwktBcC0Cxc5xy6TlaBdx6DSbr2vi6VJhqPeGsbcvPxE7Nb+wkqs8S+KGUPidnqRDWAAADYRENb6X66r5jxfjFXEvzVXExoB8LRyA/Vc/L55ic+7/0ucW/2XXifxXUxJLGAsogxl3J2Lz+nRUlNyhesqQHiTAgbDWByndfO1q6va9WZJORZ0C3LrfYKZSeqqk9TKT1jjXVtRqKdSqqlp1FKp1UWVdMrKQ3EdVStrLcK6NdWhxPVaKlaVBNdan10Ot1WqoNZ68qVVGqVEZtYVXqBWet1V6h1HqpWOZFqzogtqFAtPnZPUW/hXeCwz3XBMHnt7FSGcXY0hjaTnA/CRcTpfspzcNnOWW03ki4tPQbW5r16uv2ccJz8QanDnsJc+QwQQTpPQ2/dWGHwJcAS6Jm5JaGjZxvInYbqa0saQ19Vj3AxYZiD6yB6Qr/DeGg+HPeYN4BnXeYkei461z7akc/g34djsoa1zpAENAdO5kka9bqyocVYXZSwtgF0kgSBvbRdLR4dhqAkMaIE/DJXI+JPEbW1BkZTc0S3NklwNpBmwKmc/wAS8kNX4ztrqGNYRJAdMQOvd37LjvFnHWNDmNflcNRAyxOmlvdVmJ49WqgNzuAmQBAOmtrfRXM+JWGJAIbLRzm2sjmV3z4PhLq/kY/ifL1EHHcZe8hrSWtBnqTzPTaPdQn1DO7ieZkrQFnmjT4jBnkPwjqf45ry61dXtdpOFSmQcou4mLC88uephdHw3iVWkBFNpa20FodEazM22g2/NUGHJDtJeTAOuXaANJk+ita+IqsLWZ3iADF2kSZAibbewWKsXL6eHqEvaw4aqLkNd5CTuGkOiSdBraBz2Uv7bM5xByi+Zj6jtPu3BYD0IPQcuUr1ZF4noAJnmBZ3qup8OcdpsYGfZskiHnI05xtMEEuncz+8sWVZYbxhR8rXvxTXaF+YPb0BbmERzABt3XSUhXc8eem+k5mYOaBmJgQcpnrMDUXvIXHcV4fh3mGOyOIzwRLdCQQ4zlaZ2Mc4VbV4vUp0adOm8h1N1Ql3LNo0SNIJkc07/RP7voWD8TtGYDEOBGYOysOvJxFp2/ULVjScTTc3D13sqGwe8BwJ/CSCcs89ROlly+C8QB5YzHsc8ONqjHZHGbecNIa+25ErrOE130nOYW58K7KWVGy4AWnzAeWOdtL6qzyaneVbnN+4+M4zDvY5wqHzhxa4Ey6RqTzHWbqJK7H/AJH4bkxP2rbsqizrfG3yuBjQxlPrK44BanbPaXnfQFtY5aV60oiax6k06irmvW9j0VZsqKQyqqtj1uZURerRtVZisq1tZZispw6nmstb6qiGstbqycOpT6qjPqLS+qtLnqnWT3qO968c9aHuRHudFqlER9Ufwqm9hewkOkZg8G2pMO1G1lBdw4sdIJd/l8XpMgjeytsTiqrxleQRr8LAehkCfmmG4dUeIY3NluBItPSZ9AvqZxZP5q811LfUa8PhAwB7Gtc8kXc6ANZjSNtVNqcWxTPIKxFtGiTBG8ggb8lFqUXMcWvZlP4QMmt7mJhTOHUg98OIY0gybD+ek/mpfFP919ny/I1VOIVsjmueW54A3OXQydQImPyMyqTEUMxPUzeblfRKXAsPBJrAgEFzSfvC7gA6CRfpE7rCtwagwFzXNDHXa1zHOMcg4Tm1Ux5MZvqf4XWdX7cJh8GQIAIIkTpE/wAKv8ZVg2ixhAlxEc8rdXHnqB6r6th/DmHLA6HxBJIaR/7EARpovkv/ACMwf1DGtEMbT8u8kvfNxvAas+bzTWbxcY5Z1yeGwzqhIYJOvZu5J0Fvdan04cQHSRNxccp9brxsgEDQxPIxp81hML57um8LrNZUY5zM4a5pIkiwPMEfn3Vv4lw5ZXDjdj2Mex4EB7S0XEWmZHoqLDHVdXguKYZ9EUcQ57MoIY5vmEGDlLYmARYnSTBFwc376scvWfLg2fyVpwBxFUOaGuIcJGYNN7HzEi9+o5rPiWGwzGgU3l79CfI6/PyEjYQZ7zopfAn4RpmqHttYtvc688tv8SJGjUt9DtsVwejiaedgfTcyBUaWjM1slwO8C7oIttsuC45SLKz2OAkRpoQWgh3rM+q6+iGUXsq0MSQL/G+GOaDLmFgFj5j5TYyYvEWVd+FxTRmbSqXsI87ZiWNILXt7SNtVmXi2dfLXybE6K54D4gr4U+R5yH4mXg9RFweq65vhHBVWkMa+k++V32he0n8EumHdCPdUPFPCbqbYYXZx+NzWh+ugIAGh0c6YV7DlXT+J0Mbh3NrMIDnBjn7scASx4ixjMfTMNCV8sxuEdSe6m8XaYMXB5EHcEXB5FfROC8NxFJhDg0kkPYAM0kG7bwHAgfKO1f4vwbK1L7enTyupwHZQcrqZuImT5ba6AkaAJm8pY4IlElFtlmD/AL/RZNetS9lBIa9bmPUIOWQei9TRUWX2qhh69FRBLzrA1FH+0Xheh1vdUWpz1qL1jKHWTnrAleEoiCIiD71iMRhHGKGJwjG7A4hzh6BwgFYuoU9Xvw1Qb5K9Js9df0XwdF6J/qNRzvjlfdK1fCMsKbL7/wBQxwH/AFsD3UhnHuHNEF7GGDo+kTffNJdK+Bol/wBRefX+SePn6+2t8R4KkSTXovFoEl9uXlIj2K0VvHuAgyc3LJSyubrMFwvrqV8aKBS+e38izEfVan/JmDY2KWCe90zmqPDSTzOWZXI+JfFX9YWf/HpUgzNBZOY5okOJ1Fht+ZXLr0Bcru37rUkiZF+61uYpOFw7nNnktb2ELEsqtNJsFZVm7rZTaCeq2VNCDcoNFNwBClOeFCJWYJPdBaDHuy5YGW3llxAIjYuPZT+EY1hBpvdkkDKQS0SDYmDbXXsec82Kh0K9ZULSHDUaKcXr6VhXufTg1HNqtEtfZwcwGHBzABDmzMgbg3EhTDiKmIpuZmY7EMJa5tiKgABhpd96Wgw67TOgJA5ThXih2WHk5mCA4nrY2g2i194m6veD+IW1WljmFjjJZUYLh7GyDlAhxHIAiNhtni9aPD2Of9p9m8PGV+Vucy9pIgAzqQ4Se/OCptTG0szywtDn52Pb8MPY0vD4IgAta6ds0SOeXEcGzFtNeiGtrmGvAkNNRsEOkEQHBoh2035jn8SxxcazDDKjSHDytIrEw5rm8/MXet9wiuQ4pQDKr2tIIDjEcjcfIqGr3xPhA1zKjQ0NqtmGmQHMJY6Jvctzf+SoitxgSERUElF7qg8lely8RB6CkrxEHocvAUlEBERAREQEREABERARECAgKIglUMY5ogaLaHyJ5qAsmuI0KckE1zPdeFx9QsaVYHWx/NbICg01GbheDmt+XYhYtolBpMrcwBeuY6NFphyDa7ot+AxLmPa9pILSHakXF9vq6hyUBIQddwrGeao5nlDgahAktY5r5bG4Fj6OIUXC8WAqEu84rOOfNFmOdGeDYOvmk8lA4XjMjamYxmY9rbSczhAPKOqjUqVp1cSAP17ahTi9W/iR7XYamLE06j2NM6scJn/8t91yaueLVP7dNs6F1ulrz3n0IVPKs+ivERFUCiIgIiEICQiICIiAgRJQewiyynkfZEGCJCAoBREQEhEQESUQESUQFm2qRYFYIgl0sVs73WxtRuuZQECC0D50I90NInf9VVreyu4b8+vp9c1OCd/T9Vi6mQVGGMduB+Sxq4tx0t2/dOCW1oW8YlrW63NjEExGkc1UfanmsE4N+JrlxnQaAcv5WhECoAoiICIiBKyzcrfp2WKICIhKAiIgIiIPZReIgsOJ02g+VV6yJJPNYqZnJxbe0REVQRCEQEREBERARECD36heIiAiIgIiICIiAhKIgIiICIvRG6DwIiIAKIiAiIgIhRAREQEREAIURAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/9k=" alt="quasar" height="510px" width="728px">
+                    </h1>
+                </div>
+                <div class="slide">
+                    <h1 class="slide-number">
+                        <img src="quasar2.jpg" alt="quasar" height="510px" width="728px">
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="learn-heading">
+            <h1>Learn more about Meteorites</h1>
+        </div>
+        <div id="learn">
+            <ol>
+                <li><a href="https://solarsystem.nasa.gov/asteroids-comets-and-meteors/meteors-and-meteorites/overview/?page=0&per_page=40&order=id+asc&search=&condition_1=meteor_shower%3Abody_type">https://en.wikipedia.org/wiki/meteorites</a></li>
+                <li><a href="https://www.britannica.com/science/meteorite">https://www.britannica.com/science/meteorites</a></li>
+                <li><a href="">http://www.seasky.org/celestial-objects/meteorites</a></li>
+                <li><a href="https://www.newscientist.com/definition/what-is-a-meteorite/">https://www.merriam-webster.com/dictionary/meteorites</a></li>
+            </ol>
+        </div>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.exspace.com. All rights reserved
+            </div>
+        </footer>
+</body>
+</html>
