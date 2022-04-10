@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+        <title>QUICK FACTS</title>
+    </head>
+    <style>
+        body{
+            background: url(https://github.com/Anandswati712/Anandswati712/raw/main/background.jpg) no-repeat center/cover;
+            color: white;
+        }
+        h1{
+            font-size: 3.5rem;
+        }
+        h2{
+            font-size: 2.0rem;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        #facts{
+        margin:0;
+        padding:100px;
+        }
+        .nav {
+  height: 80px;
+  width: 100%;
+  background-color: #0e0101;
+  position: fixed;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 24px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgb(182, 16, 247);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color:black;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(16, 241, 27);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+        footer{
+    display:flex;
+            flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    background:black;
+    color:rgb(228, 228, 161);
+    padding:9px 20px;
+}
+    </style>
+    <body>
+
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                <img src="https://raw.githubusercontent.com/Aryasharma001/focp1/main/logo2.png"hieght="80px" width="80px">
+              </div>
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+            
+            <div class="nav-links">
+              <a href="#" target="_blank">Home</a>
+              <a href="#" target="_blank">Videos</a>
+              <a href="#" target="_blank">Quick Facts</a>
+              <a href="#" target="_blank">About Us</a>
+            </div>
+          </div>
+        <div id="facts">
+        <h1 style="text-align:center">QUICK FACTS</h1>
+        <br><br>
+        <h2 id="name">QUASARS</h2>
+        <ul style="list-style:circle">
+        <li>Quasars are well known for being the most luminous objects in our entire universe.</li>
+        <li>Like other active galactic nuclei, Quasars rely on supermassive black holes to generate enough power for them.</li>
+        <li>We first discovered Quasars all the way back in the 1960s. The first Quasar was discovered by an astronomer named Allan Sandage.</li>
+        <li>They are even more luminous than several galaxies combined together! In comparison to our Milky Way, they can be anywhere from 10 to 100,000 times as bright.</li>
+        <li>However fast forward to now, and more than 500,000 Quasars have been discovered in our universe.</li>
+        <li>The nearest Quasar to our planet Earth is name Markarian 231, and it is approximately 581 million years away from us.</li>
+        </ul><br><br>
+        <h2 id="name">BLACKHOLE</h2>
+        <ul style="list-style: circle;">
+<li>Black holes are physical objects in space, just like
+    everything else we see in the night sky.
+    But they pack so much mass into so small a space
+    that not even light can escape their gravity.</li>
+<li> Gravity compresses and heats
+    debris in the accretion disk to millions of degrees,
+    producing lots of lethal radiatio</li>
+<li>“Middleweight” black holes may exist
+    between these classes, but none
+    have been found to date.</li>
+<li>You can also find black holes by tracking stars’
+    orbits over many years. This is how scientists
+    learned there’s a supermassive black hole at the
+    center of our galaxy! </li>
+<li>Black holes can be surrounded by rings of gas and
+    dust called accretion disks. The material in the disk
+    gets hot enough to generate X-rays and other light.
+    You can also find black holes by tracking stars’
+    orbits over many years. This is how scientists
+    learned there’s a supermassive black hole at the
+    center of our galaxy!
+    Keep an eye out for ripples in space-time called
+    gravitational waves. They can be created when two
+    black holes rotate around each other or when a
+    star orbits close to a black hole.
+    Please be aware that black holes could be
+    present in any direction in space.
+    Warning Signs You’re Too Close to
+    a Black Hole</li>
+<li>Once you enter the event horizon, escaping the
+    black hole requires traveling faster than light. As this
+    technology is currently unavailable, please maintain
+    a safe distance from black holes at all times.</li>
+</ul><br><br>
+<ul style="list-style: circle;">
+    <h2 id="name">STARS</h2>
+    <li>There are 9,096 stars visible to the naked eye in the entire sky. To see more, you have to use a telescope to reveal stars fainter than your eyes can see.</li>
+<li>Stars are born in batches in their stellar nurseries. Over time, they travel through the Milky Way, far from their crèches.</li>
+<li>When you look at a star (or any object in space) you are seeing how it looked in the past. The Sun appears as it was 8.5 minutes ago. The view of Alpha Centauri is 4.3 years old, while the appearance of Sirius is more than 8 years old.</li>
+<li>The furthest distance an individual star has been observed from is about 100 million light years from the Earth in the M100 galaxy of the Virgo Cluster.</li>
+<li>The more massive a star, the shorter its lifespan. A very massive star may live only tens of millions of years, while a cool dwarf will shine on for billions of years. At an age of about 4.5 billion years, our Sun is considered middle-aged.</li>
+<li>In 185 AD Chinese astronomers were the first to record a supernova, this is now classified as SN 185.</li>
+</ul><br><br>
+<ul style="list-style: circle;">
+<h2 id="name">ASTEROIDS</h2>
+<li>An asteroid impact some 65 million years ago contributed to the extinction of the dinosaurs. (It was one of several factors that affected all life on Earth at that time.)</li>
+<li>Earth suffers an impact from an object the size of a football field about once every 2,000 years.</li>
+<li>Asteroids are rich in precious metals and other metals, as well as water.</li>
+<li>Some asteroids are actually blown-out comets. The ices are gone, and all that’s left is the rocky material.</li>
+<li>Most asteroids orbit the Sun in the Asteroid Belt, which lies between Mars and Jupiter.</li>
+<li>ome asteroids have moons of their own.</li>
+</ul><br><br>
+
+<ul style="list-style: circle;">
+<h2 id="name">METEOROIDS</h2>
+<li>A meteoroid is a chunk of space rock. When it burns up while entering the Earth’s atmosphere, it is called a meteor. And if a piece of it lands, it’s called a meteorite.</li>
+<li>Millions of meteoroids travel through the Earth’s atmosphere every day, but most are small and burned up quickly. Very few reach the ground.</li>
+<li>When a meteoroid hits the atmosphere of the Earth, it can be travelling as fast as 130,000 mph (209,215 km).</li>
+<li>A meteorite that is seen or detected as it lands are called “falls”, with those that are discovered later being referred to as “finds”.</li>
+<li>Space rocks that are less than 1 meter in diameter are called meteoroids. Those that are more than 1 meter in size are classified as asteroids.</li>
+</ul>
+<br><br>
+<ul style="list-style: circle;">
+    <h2 id="name">NEUTRON STAR</h2>
+    <li> Despite the extremes of neutron stars, researchers still have ways to study them.</li>
+<li>In just the first few seconds after a star begins its transformation into a neutron star, the energy leaving in neutrinos is equal to the total amount of light emitted by all of the stars in the observable universe.</li>
+<li>It’s been speculated that if there were life on neutron stars, it would be two-dimensional.</li>
+<li>The fastest known spinning neutron star rotates about 700 times each second.</li>
+<li>The wrong kind of neutron star could wreak havoc on Earth.</li>
+</ul>
+<br><br>
+<ul style="list-style: circle;">
+    <h2 id="name">PLANETS</h2>
+    <li>Jupiter has more than double the mass of all the other planets combined.</li>
+<li>Only 8 planets have been discovered in our solar system but there is compelling evidence for a 9th planet.</li>
+<li>Together the planets make up 0.14% of the solar systems mass, 99% of which is the gas giants (Jupiter, Saturn, Uranus and Neptune).
+</li>
+<li>With the exception of Neptune and Uranus the other 6 planets can be seen unaided and all 8 are visible with a small telescope or binoculars.</li>
+<li>Except for the Earth, the planets are named after gods from Roman and Greek mythology.</li>
+</ul><br><br>
+
+<ul style="list-style: circle;">
+    <h2 id="name">NEBULA</h2>
+    <li>Dark nebulae are the interstellar clouds so dense that they block any light from background stars.</li>
+<li>It is estimated by scientists that in about 5 billion years from now, our Sun will also become a nebula.</li>
+<li>Orion nebula is the closest to earth at a distance of 1,300 light years away from us.</li>
+<li>A planetary nebula is made up of glowing and expanding ionized gases.</li>
+<li>An emission nebula is formed when ionized gases emit a variety of colors, most often the result of a nearby hot star.</li>
+</ul><br><br>
+</div>
+<footer>
+    <div class="center">
+        Copyright &copy; www.exspace.com. All rights reserved
+    </div>
+</footer>
+</body>
+</html>
